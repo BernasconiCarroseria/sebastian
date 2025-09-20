@@ -1,13 +1,15 @@
-/* --- CONFIGURACIÓN GENERAL Y CONTENEDORES (sin cambios) --- */
+/* --- CONFIGURACIÓN GENERAL --- */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background-color: #f4f6f8; color: #333; padding: 15px; }
+
+/* --- CONTENEDORES --- */
 .app-container { max-width: 600px; margin: 0 auto; }
 .app-header { text-align: center; margin-bottom: 25px; }
 .app-header h1 { color: #2c3e50; }
 .card { background-color: #ffffff; border-radius: 12px; padding: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); }
 .card h2 { margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px; color: #34495e; }
 
-/* --- ESTILOS DE FORMULARIO Y BOTONES (sin cambios) --- */
+/* --- ESTILOS DEL FORMULARIO --- */
 form label { display: block; font-weight: 600; margin-bottom: 5px; margin-top: 15px; color: #555; }
 form input { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-size: 1rem; }
 form input:focus { outline: none; border-color: #3498db; box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2); }
@@ -17,30 +19,18 @@ form button { width: 100%; padding: 15px; margin-top: 25px; border: none; border
 .form-card button { background-color: #27ae60; }
 .form-card button:hover { background-color: #2ecc71; }
 
-/* --- ESTADO DEL TANQUE (sin cambios) --- */
+/* --- ESTADO DEL TANQUE --- */
 #tank-status { display: flex; justify-content: space-around; text-align: center; }
 .status-item { padding: 10px; }
 .status-item span { display: block; font-size: 1.5rem; font-weight: 700; }
 .status-item .liters { color: #3498db; }
 .status-item .price { color: #27ae60; }
 
-/* --- NUEVO: Estilos para el Buscador --- */
-.search-bar {
-    margin-bottom: 20px;
-}
-.search-bar input {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
-}
-.search-bar input:focus {
-    outline: none;
-    border-color: #3498db;
-}
+/* --- ESTILOS PARA EL BUSCADOR --- */
+.search-container { margin-bottom: 20px; }
+#search-bar { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
 
-/* --- ESTILOS DEL HISTORIAL (sin cambios) --- */
+/* --- ESTILOS DEL HISTORIAL --- */
 .trip-item { display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
 .trip-item:last-child { border-bottom: none; }
 .trip-details { display: flex; flex-direction: column; }
