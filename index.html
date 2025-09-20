@@ -1,0 +1,57 @@
+<div class="app-container">
+    
+    <header class="app-header">
+        <h1>Control de Viajes</h1>
+    </header>
+    
+    <main>
+        <!-- SECCIÓN 1: ESTADO DEL TANQUE (sin cambios) -->
+        <div class="card tank-status-card">
+            <h2>Estado del Tanque</h2>
+            <div id="tank-status"></div>
+        </div>
+
+        <!-- SECCIÓN 2: CARGAR GASOIL (sin cambios) -->
+        <div class="card fuel-card">
+            <h2>Cargar Gasoil</h2>
+            <form id="fuel-form">
+                <label for="liters-added">Litros Cargados</label>
+                <input type="number" step="any" id="liters-added" placeholder="Ej: 300" required>
+                <label for="total-cost">Costo Total de la Carga ($)</label>
+                <input type="number" step="any" id="total-cost" placeholder="Ej: 90000" required>
+                <button type="button" onclick="addFuel()">Registrar Carga</button>
+            </form>
+        </div>
+
+        <!-- SECCIÓN 3: REGISTRAR UN NUEVO VIAJE (sin cambios) -->
+        <div class="card form-card">
+            <h2>Nuevo Viaje</h2>
+            <form id="trip-form">
+                <label for="serial-code">Código de Serie</label>
+                <input type="text" id="serial-code" placeholder="Ej: X-123-ABC" required>
+                <label for="destination">Destino</label>
+                <input type="text" id="destination" placeholder="Ej: Ciudad de Destino" required>
+                <label for="liters-used">Litros Consumidos en el Viaje</label>
+                <input type="number" step="any" id="liters-used" placeholder="Ej: 85.5" required>
+                <label for="trip-value">Valor del Viaje ($)</label>
+                <input type="number" step="any" id="trip-value" placeholder="Ej: 25000" required>
+                <button type="button" onclick="addTrip()">Guardar Viaje</button>
+            </form>
+        </div>
+        
+        <!-- SECCIÓN 4: HISTORIAL DE VIAJES (con el buscador) -->
+        <div class="card history-card">
+            <h2>Historial de Viajes</h2>
+            
+            <!-- NUEVO: Buscador -->
+            <div class="search-bar">
+                <input type="search" id="search-input" placeholder="Buscar por Código de Serie..." onkeyup="filterTrips()">
+            </div>
+            
+            <div id="trip-history">
+                <!-- El historial se cargará aquí -->
+            </div>
+        </div>
+    </main>
+    
+</div>
